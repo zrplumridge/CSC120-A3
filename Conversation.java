@@ -24,6 +24,16 @@ class Conversation {
 
           //this section is one round and will repeat
           System.out.println(cannedResponses[0]);
+          //need some way to check strings for mirror words - iterate through characters?
+          //but have to look for multiple characters in most cases so not switching every random i in the middle of a word
+          //going to make everything lowercase to make it easier to look through
+          
+          /*WORDS TO LOOK FOR: 
+          " I " --> " you "
+          " me " --> " you "
+          " you " --> " I " or " me " dep on context
+          " I'm " <--> " you're "
+          */
         }
 
         input.close();
