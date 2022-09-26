@@ -1,4 +1,10 @@
+/* TO DO:
+*** organize! put things in methods, eliminate excess code and test comments
+*** canned responses!
+*/ 
+
 import java.util.Scanner;
+import java.util.ArrayList;
 
 class Conversation {
 
@@ -6,8 +12,11 @@ class Conversation {
     // You will start the conversation here.
 
     String[] cannedResponses = new String[20];
-    cannedResponses[0] = "Hello!";
-    cannedResponses[1] =  "How are you doing today?";
+    cannedResponses[0] = "Greetings human";
+    cannedResponses[1] =  "What is the song of the day?";
+    cannedResponses[2] = "How does that one go?";
+    cannedResponses[3] = "What about the chorus?";
+    cannedResponses[4] = "Is there a bridge?";
     
     //define what words to look for
     String[] mirrorWords = new String[6];
@@ -17,6 +26,7 @@ class Conversation {
     mirrorWords[3] = "you";
     mirrorWords[4] = "my";
     mirrorWords[5] = "your";
+    mirrorWords[6] = "tu";
 
     //what to change these words to 
     String[] mirroredWords = new String[6];
@@ -26,6 +36,9 @@ class Conversation {
     mirroredWords[3] = "I";
     mirroredWords[4] = "your";
     mirroredWords[5] = "my";
+    mirroredWords[6] = "ego";
+
+    ArrayList<String> transcript = new ArrayList<String>();
 
     System.out.println("How many rounds?");
         Scanner input = new Scanner(System.in);
@@ -40,15 +53,13 @@ class Conversation {
         }*/
 
         for (int i = 0; i <= (numberOfRounds-1); i++){
-          //repeats for as many conversations the user wants
           //split, join, capitalize, lowercase
-          //this section is one round and will repeat
-          boolean endRound = false;
+
           String mirroredInput = "";
           
             String userInput = input.nextLine();
             //System.out.println("input: " + userInput); /* as a check to be deleted later */
-
+            transcript.add(userInput);
             userInput = userInput.toLowerCase();
             //System.out.println("lower case: " + userInput); /* as a check to be deleted later */
             String[] inputArray = userInput.split(" ");
@@ -79,11 +90,14 @@ class Conversation {
             //System.out.println("Here is the response: ");
             System.out.println(mirroredInput);
             
-            //Resets output after printed
+            //stores in an array
+            transcript.add(mirroredInput);
+            
+            //Resets output after printed and stored
             mirroredInput = "";
           }
           
-
+        System.out.println(transcript);
         input.close();
   }
 }
