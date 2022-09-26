@@ -46,14 +46,11 @@ class Conversation {
           boolean endRound = false;
           String mirroredInput = "";
           
-
-          while (endRound == false){
             String userInput = input.nextLine();
             //System.out.println("input: " + userInput); /* as a check to be deleted later */
 
             userInput = userInput.toLowerCase();
             //System.out.println("lower case: " + userInput); /* as a check to be deleted later */
-
             String[] inputArray = userInput.split(" ");
 
 
@@ -86,7 +83,6 @@ class Conversation {
             mirroredInput = "";
           }
           
-        }
 
         input.close();
   }
