@@ -8,8 +8,9 @@ Use this file to record your reflection on this assignment.
 
 
 Talked to/worked with Joanna Li
-Attended TA hours Tuesday 9/20 to get started 
+Attended TA hours Tuesday 9/20 to get started / review Java
 Had a slight issue with getting a JDK installed to even run the code but Suany Barahona helped in Slack
+Attended TA hours Sunday 9/25 (no questions answered but I enjoy working during this time)
 
 
 remember semicolons!
