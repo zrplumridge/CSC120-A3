@@ -22,7 +22,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ### Level 2 (3 pts)
 
----- 1 pt: Uses a canned response when no mirror words detected
+**YES** 1 pt: Uses a canned response when no mirror words detected
 
 **YES** 1 pt: Detects the requested set of mirror words (at minimum)
 
@@ -32,9 +32,9 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: Makes all appropriate mirror replacements
 
-_____ 1 pt: Stores transcript of the conversation in an array
+**YES** 1 pt: Stores transcript of the conversation in an array
 
-_____ 1 pt: Prints transcript when terminating
+**YES** 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
@@ -64,6 +64,6 @@ _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed checklist file)
+**YES** 1 pt: All required files included with submission (including completed checklist file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment
+**YES** 1 pt: `reflection.md` contains your reflection on the assignment
