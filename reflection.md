@@ -15,7 +15,7 @@ Order matters. A program can't use a variable or function before it's defined. D
 
 I am finding Java harder to keep organized because I don't absolutely have to tab as in Python. This probably means that I should define more methods and maybe add more comments in addition to indentation. 
 
-I kept forgetting to add to the array size when adding words to mirror, so there were a lot of errors from that. 
+I kept forgetting to add to the array size when adding words to mirror, so there were a lot of errors from that. I also keep forgetting that I have some extension on to automatically close quotation marks, parthentheses, etc., so I double-type them, although I expect that I would miss more if I turned it off. I will just have to get used to that. 
 
 
 remember semicolons!

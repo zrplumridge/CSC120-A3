@@ -2,19 +2,20 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class Conversation {
+  /* Runs a conversation about music! */
 
   public static void main(String[] arguments) {
 
     /* Defining responses to use if no mirror words detected */
     String[] cannedResponses = new String[20];
-    cannedResponses[0] = "Greetings human ";
+    cannedResponses[0] = "Greetings human! ";
     cannedResponses[1] =  "What is the song of the day? ";
     cannedResponses[2] = "How does that one go? ";
     cannedResponses[3] = "What about the chorus? ";
     cannedResponses[4] = "Is there a bridge? ";
-    cannedResponses[5] = "I don't know that one ";
-    cannedResponses[6] = "Huh";
-    cannedResponses[7] = "Cool";
+    cannedResponses[5] = "I don't know that one. ";
+    cannedResponses[6] = "Huh. ";
+    cannedResponses[7] = "Cool. ";
     int responseToUse = 0;
     
     /* Defining which words to look for */
@@ -40,9 +41,10 @@ class Conversation {
     /* Creates a place to store the transcript of the conversation */
     ArrayList<String> transcript = new ArrayList<String>();
 
+    /* Asks the user how long to run the conversation */
     System.out.println("How many rounds?");
     Scanner input = new Scanner(System.in);
-    int numberOfRounds = input.nextInt(); //Asks how long to run conversation
+    int numberOfRounds = input.nextInt();
     
     System.out.println(cannedResponses[0]); 
     responseToUse ++; //Sets up canned responses 
@@ -52,11 +54,13 @@ class Conversation {
 
       String mirroredInput = ""; //Resets mirrored input to blank so not repetitive
       
+      /* Gets and reformats user input */
       String userInput = input.nextLine();
       transcript.add(userInput);
       userInput = userInput.toLowerCase();
       String[] inputArray = userInput.split(" ");
-
+      
+      /* Program automatically uses canned responses if no mirror words detected */
       boolean useCannedResponse = true;
 
       for (int j = 0; j < (inputArray.length); j++){
@@ -85,14 +89,15 @@ class Conversation {
 
         //prints a canned response from an array
         System.out.println(cannedResponses[responseToUse]);
-        System.out.println("what number canned response using:" + responseToUse); //delete later
         transcript.add(cannedResponses[responseToUse]);
         //increments responseToUse in order to not repeat canned response
         responseToUse ++;
         
         if (responseToUse == cannedResponses.length) {
           responseToUse = 0; //this doesn't seem to be working
-          //current issue: runs out of canned responses so prints null
+          /*current issue: runs out of canned responses so prints null
+           * (not actually a glitch but the conversation lulls)
+          */
         }
       }
       
@@ -100,8 +105,13 @@ class Conversation {
       //Resets output after printed and stored
       mirroredInput = "";
     }
-      
-    System.out.println(transcript);
+
+    String formattedTranscript = transcript.toString()
+    .replace(",", " // ")  //remove the commas
+    .replace("[", "")  //remove the right bracket
+    .replace("]", "")  //remove the left bracket
+    .trim();           //remove trailing spaces from partially initialized arrays
+    System.out.println("Transcript: " + formattedTranscript);
     input.close();
   }
 }
